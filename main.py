@@ -9,12 +9,10 @@ def sqrt_formula(root_value, num, guess):
 
 def smart_guesser(root_value, num):
     close_guess = 0
-    close_guess_reached = False
-    if close_guess_reached == False:
-        for closest_guess in range(100):
+    for closest_guess in range(100):
             if closest_guess ** root_value >= num:
                 close_guess = closest_guess
-                close_guess_reached = True
+                break
     return close_guess
 
-print(sqrt_approximator(10, 3.5, 1000, 2))
+print(sqrt_approximator(10, 5, 10, 3))
