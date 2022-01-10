@@ -4,7 +4,7 @@ def sqrt_approximator(num, guess, precision, root_value):
     return num
 
 def sqrt_formula(root_value, num, guess):
-    new_approximation = float((1/root_value)*(root_value*guess + num/guess**root_value))
+    new_approximation = float((1/root_value)*((root_value-1)*guess + num/guess**(root_value-1)))
     return new_approximation
 
 def smart_guesser(root_value, num):
@@ -17,4 +17,4 @@ def smart_guesser(root_value, num):
                 close_guess_reached = True
     return close_guess
 
-print(sqrt_approximator(10, 7, 5, 2))
+print(sqrt_approximator(10, 7, 10, 2))
